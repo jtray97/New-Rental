@@ -13,7 +13,6 @@ const aws = require('aws-sdk')
 const nodemailer = require ('nodemailer')
 
 app.use(express.static(__dirname + '/../build'))
-//MIDDLEWARE
 app.use(bodyParser.json())
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -66,7 +65,7 @@ app.get('/callback', (req, res) => { //make sure TO CHECK THIS ONE HERE!=A-=F=-0
             client_secret: process.env.AUTH0_CLIENT_SECRET,
             code: req.query.code,
             grant_type: 'authorization_code',
-            redirect_uri: `http://${req.headers.host}/callback`
+            redirect_uri: `${process.env.PROTOCALL}://${req.headers.host}/callback`
         };
 
         return axios.post(`https://${process.env.REACT_APP_AUTH0_DOMAIN}/oauth/token`, payload);
