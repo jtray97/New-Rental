@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|PT+Sans');
+.imgDiv{
+    width:100%;
+    height:30vh;
+    /* border: 1px solid red; */
+    /* float:left; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+    min-height:240px;
+}
+
+.UnitImg{
+    max-width:100%;
+    max-height:100%;   
+    border:2px solid #7B9DB4;
+    /* border:2px solid blue; */
+    border-radius: 5px;
+    z-index: 4
+}
+
+.unit_zip_code{
+    position: relative;
+    right:0px;
+    /* border: 1px solid lightblue; */
+    /* z-index: -15 */
+    float:right;
+    font-family: 'PT Sans';
+}
+.infoz{
+    /* border:2px solid red; */
+    padding:5px;
+    height:80px;
+    background-color: #3e627f;
+}
+.UNITtype{
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    float:left;
+    text-align:left;
+    font-family: 'PT Sans';
+}
+
+.category{
+    float:left;
+}
+.testing{
+    /* padding:10px; */
+    /* padding-right:30px */
+}
+.Unit{
+    height:70vh;
+    width: 100%;
+    /* margin:0px 10px; */
+    /* margin-right:150px; */
+    margin-bottom:10px;
+    border:1px solid #7B9DB4;
+    padding:10px;
+    position:relative;
+    background-color: #DDE5ED;
+    border-radius: 5px;
+    min-height:580px;
+}
+
+.UnitContent{
+    width:100%;
+    float: left;
+    /* border:1px solid blue; */
+    position:relative;
+    font-family: 'PT Sans';
+    /* height:auto; */
+}
+
+
+
+.unit_name{
+    width:100%;
+    font-size: 140%;
+    font-family: 'Oswald';
+    font-weight: bold;
+    padding:5px;
+    border-bottom: 1px solid #7B9DB4;
+    z-index: 11
+    /* border:1px solid green; */
+}
+
+/* .TypeFilter{
+    text-align:center;
+    font-size:125%;
+    margin-left:25%;
+    margin-bottom:20px;
+} */
+
+.PPD{
+    color: greenyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:125%;
+    position: relative;
+    right:2px;    
+    /* float:right; */
+    text-align: right;
+    font-family: 'PT Sans';
+}
+
+.numbers{
+    /* border:1px solid orange; */
+    float:right;
+    display:flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content:right;
+    /* border:1px dotted #bada55; */
+
+}
+
+.contact-info{
+    border-top: 1px solid #7b9db4;
+    position:absolute;
+    /* border:1px dashed purple; */
+    float:left;
+    margin: 5px 0px;
+    /* bottom:-15px; */
+    /* top:65px; */
+}
+.Contact{
+    text-align: left;
+    /* bottom:0px; */
+}
+/* .unit_Type{
+    position: relative;
+    left:0px;
+} */
+
+.descDiv{
+   float:left;
+   position:relative;
+   /* top:35px; */
+   text-align: left;
+   border:1px solid #7b9db4;
+   width:100%;
+   margin: 5px 0px;
+   font-family: 'PT Sans';
+   height:30%;
+   padding: 5px;
+   background-color: #c3d2de
+}
+
+.EmailButton{
+    color:#dde5ed;
+    font-size: 105%;
+    height:30px;
+    width:130px;
+    background-color: #173247;
+    border:none;
+}
+
+.editDiv{
+    position: relative;
+    z-index: 2;
+    width:100%;
+    /* border:5px solid gold; */
+    display:flex;
+    justify-content: center;
+}
+.editButton{
+    height:30px;
+    width:50px;
+    background-color: #3e627f;
+    border:none;
+    margin-right:10px;
+}
+.deleteButton{
+    height:30px;
+    width:50px;
+    background-color: #3e627f;
+    border:none;
+}

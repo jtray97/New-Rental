@@ -1,0 +1,16 @@
+.testing{
+   padding:15px;
+}
+.header{
+    top:0px;
+    left:0px;
+    position:fixed;
+    background-color: white;
+    width:100%;
+    /* margin-bottom: 100px; */
+    border:1px solid #173247;
+    z-index: 1000
+}
+.spacerDiv{
+    height:100px;
+}

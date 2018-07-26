@@ -1,0 +1,199 @@
+/* Login page */
+
+@media ( max-width: 500px) {
+    .Login {
+        width: 50vw;
+    }
+    .skipButton {
+        width: 30%;
+    }
+}
+@media (min-width:1000px) {
+    .Login {
+        width: 400px;
+    }
+    .skipButton {
+        width: 200px;
+    }
+}
+/* All Groups Page */
+@media(max-width:300px) {
+    .groups {
+        width: 90%;
+    }
+    .groupsLink {
+        width: 100%;
+    }
+}
+@media(max-width:500px) {
+    .groups {
+    background-position: center;
+    width:70%;
+        }
+    .groupsLink {
+        width: 100vw;
+    }
+}
+@media(max-width:730px) {
+    .groups{
+        width:70%;
+        height:50vw;
+    }
+    .groupsLink{
+        width:65vw;
+        height:50vw;
+    }
+    }
+
+
+    @media(min-width:730px){
+        .groups{
+            width:40%;
+            height:30vw
+        }
+        .groupsLink{
+            width:40vw;
+            height:30vw;
+        }
+    }
+    
+    @media (min-width:1000px){
+        .groups{
+            width:25%;
+            /* border:10px solid red; */
+            /* height:20vw; */
+        }
+        .groupsLink{
+            width:24vw;
+            height:30vw;   
+        }
+        #Off-roaders{
+            background-position: center;
+        }
+        #camping{
+            background-position: center;
+        }
+        #camping:hover{
+            background-position: center;
+        }
+        #packages:hover{
+            background-image: radial-gradient(rgba(255, 255, 255, 0) 18%, black 110%), url('../../Assists/Images/Other/fishing-tackle-box-16100334.jpg')
+        }
+    }
+
+/* UNIT */
+
+@media (min-width:730px){
+    .UnitContent{
+        /* border:5px solid gold; */
+        position:absolute;
+    }
+    .descDiv{
+        z-index: 6;
+        position:relative;
+        height:38%;
+    }
+
+
+    .unit_name{
+        position:relative;
+        width:50%;
+        left:48%;
+        bottom:250px;
+
+    }
+    .imgDiv{
+        position:relative;
+        justify-content: flex-start;
+        max-height:50%
+    }
+    .UnitImg{
+        position:relative;
+        float:left;   
+        height:100%;    
+    }
+    .infoz{
+        position:absolute;
+        z-index: 15;
+        bottom:150px;
+        right:10px;
+        width:50%
+    }
+    .contact-info{
+        position:relative;
+        top:2px;
+    }
+    .testing{
+        padding:20px;
+        padding-right:30px;
+    }
+    .Unit{
+        min-height:450px;
+        height:450px;
+        max-height:550px;
+        margin:10px;
+    }
+    .EmailButton{
+        position: absolute;
+        bottom:200px;
+        right:15px;
+        z-index: 10;
+        border:1px solid #7b9db4
+    }
+    .editDiv{
+        position:absolute;
+        z-index: 2;
+        top:200px;
+        justify-content: flex-end;
+        right:10px;
+    }
+}
+
+
+@media (min-width:1000px){
+    .testing{
+        padding:20px;
+        padding-right:40px;
+    }
+    .imgDiv{
+        max-height:100%;
+        width:auto;
+        min-height:100%;
+    }
+    .Unit{
+        min-height:280px;
+        max-height:280px;
+    }
+    .editDiv{
+        justify-content: flex-end;
+        align-items: flex-end;
+        bottom:10px;
+        /* right:0px; */
+        z-index: 3;
+        /* border:10px solid gold */
+        
+    }
+    .infoz{
+        bottom:40px;
+        right:10px;
+        z-index: 15;
+    }
+    .unit_name{
+        position:absolute;
+        /* top:-0px; */
+        bottom:230px;
+        height:auto;
+        z-index: 10;
+        width:50%;
+        right:0px;
+    }
+.descDiv{
+    position:absolute;
+    top:40px;
+    width:60%;
+    right:0px;
+}
+.EmailButton{
+    bottom:10px;
+}
+}

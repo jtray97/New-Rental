@@ -1,0 +1,52 @@
+{
+  "name": "personal-project",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/api":{
+      "target":"http://localhost:4000"
+    },
+    "/auth":{
+      "target":"http://localhost:4000"
+    },
+    "/sign-s3":{
+      "target":"http://localhost:4000"
+    },
+    "/callback":{
+      "target":"http://localhost:4000"
+    }
+  },
+  "main": "server/server.js",
+  "dependencies": {
+    "aws-sdk": "^2.279.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "busboy": "^0.2.14",
+    "busboy-body-parser": "^0.3.2",
+    "connect-busboy": "0.0.2",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.17.5",
+    "profanity-middleware": "^0.3.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-dropzone": "^4.2.13",
+    "react-modal-image": "^2.1.4",
+    "react-popupbox": "^2.0.8",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-spinners": "^0.3.3",
+    "redux": "^4.0.0",
+    "styled-components": "^3.3.3",
+    "sweetalert2": "^7.25.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

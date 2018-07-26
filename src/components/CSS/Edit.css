@@ -1,0 +1,62 @@
+.Edit{
+    top:40px;
+    position:absolute;
+    padding:10px;
+}
+.imageInputDivs{
+    margin:auto;
+}
+.Slip{
+    /* height:500px; */
+    /* margin:10px;
+    margin-bottom:10px; */
+    border:1px solid #7B9DB4;
+    padding:10px;
+    position:relative;
+    margin-right:10px;
+    background-color: #DDE5ED;
+    border-radius: 5px;
+    min-height:450px;
+    max-width:99%;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-content: center;
+}
+.input{
+    border:1px solid black
+}
+#unit_name{
+width:100%;
+height:30px;
+font-family: 'PT Sans';
+border:0.5px solid black;
+}
+
+#ppd{
+    width:100px;
+    height:30px;
+    border:0.5px solid black;
+}
+#zip_code{
+    height:30px;
+    width:100px;
+    border:0.5px solid black;
+}
+#contact_info{
+    width:90px;
+    border:0.5px solid black;
+    height:30px;
+}
+#contact_info2{
+    width:90%;
+    border:0.5px solid black;
+    height:30px;
+}
+
+#description{
+    height:60px;
+    width:100%;
+    display:flex;
+
+}

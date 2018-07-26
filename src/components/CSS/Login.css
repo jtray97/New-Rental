@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+.LoginPage{
+    background-image:url('./../../Assists/Images/Backgrounds/wide\ lake\ and\ trees.jpeg');
+    /* background-position: center; */
+    background-size:cover;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.Login{
+    position:relative;
+    height:10vh;
+    width:40vw;
+    top:35%;
+    font-family: Pacifico;
+    font-size:175%;
+    border: .5px solid #3E627F;
+    background-color:#7D9DB4;
+}
+
+.skipButton{
+    position:relative;
+    height:6%;
+    width:20%;
+    top:38%;
+    background-color: #C3D2DE;
+    border:.5px solid #7D9DB4;
+}
+

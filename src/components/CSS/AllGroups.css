@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+.body{
+    height:100vh;
+    width:100%;
+}
+
+.AllGroups{
+    width:100%;
+    height: 100%;
+    /* background-image: url('../../Assists/Images/Backgrounds/Bluish\ Trees.jpeg'); */
+    background-size: cover;
+    /* margin-top: ; */
+    /* background-position:center; */
+    /* z-index: 2; */
+}
+.allBut{
+    width:100%;
+    height: 90%;
+    display:flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap:wrap;
+    position: relative;
+    /* top:650px; */
+    padding:25px;
+    /* padding-top:1000px; */
+    /* margin-top: 500px; */
+    /* z-index: 1; */
+    /* border: 1px solid red */
+    /* background-image: url('./../../Assists/Images/Backgrounds/green\ and\ river.jpeg'); */
+    /* position: absolute;  */
+}
+
+
+.MiniProf{
+    float:right;
+    top:10px;
+    right:80px;
+    position: fixed;
+    border:none;
+    z-index: 1000
+}
+#LogIn{
+    position:fixed;
+    height:30px;
+    width:80px;
+    background-color: #C4D2DF;
+    right:30px;
+}
+#goToProfile{
+    position:fixed;
+    height:30px;
+    width:auto;
+    background-color: #C4D2DF;
+    right:30px;
+}
+.GoHome{
+    border:none;
+    top:10px;
+    left:30px;
+    position: fixed;
+    height:30px;
+    width:80px;
+    background-color: #C4D2DF
+}
+
+/* .test{
+    height:300px;
+    width:400px;
+} */
+
+/* radial-gradient(rgba(255, 255, 255, 0) 0%, black 200%),  */
+
+.layer{
+    position: absolute;
+    top: 0px;
+    margin-top:0px;
+    padding-top:1vh;
+}
+.parallax-container{
+    padding:0px;
+    perspective: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width:100%;
+    height:100%
+}
+
+.five{
+    transform: translateZ(-80px) scale(9.07);
+    background-image: url("./Parallax/5vector.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+.four{
+    transform: translateZ(-50px) scale(6.1);
+    top:-70px;
+    background-image: url("./Parallax/4vector.png");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+.three{
+    transform: translateZ(-20px) scale(3.4);
+    background-image: url("./Parallax/3vector.png");
+    background-repeat: no-repeat; 
+    top:700px;
+    left:-50px;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+.two{
+    transform: translateZ(-10px) scale(2.5);
+    background-image: url("./Parallax/2vector.png");
+    top:690px;
+    left:50px;
+    background-repeat: no-repeat; 
+    background-position: right;
+    height:100%;
+    width:100%
+}
+.one{ 
+    transform: translateZ(0) scale(1.1);
+    background-image: url("./Parallax/1vector.png");
+    background-repeat: no-repeat; 
+    top:700px;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+#Off-roaders{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 18%, black 110%), url('../../Assists/Images/Rzr/Big\ Jump.jpg');
+}
+#Off-roaders:hover{
+    background-image:radial-gradient(rgba(255, 255, 255, 0) 60%, black 130%), url('../../Assists/Images/Quad/Quad\ Jump.jpg');
+}
+#camping{
+    background-image: url('../../Assists/Images/RV/Night\ RV.jpg');
+}
+#camping:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black 110%), url('../../Assists/Images/Camper/60s\ RV.jpg');
+    background-position: left;
+}
+#packages{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 50%, black 100%), url('../../Assists/Images/Group/backpacking\ stuff.jpg')
+}
+#packages:hover{
+    background-image: url('../../Assists/Images/Group/tackle-box-695271_960_720.jpg');
+    background-position: center;
+}
+#watercraft{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 40%, black 130%), url('../../Assists/Images/Boats/Sunset\ Boat.jpg')
+}
+#watercraft:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 50%, black 130%), url('../../Assists/Images/JetSki/jet-2565671_960_720.jpg')
+}
+#experiences{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 60%, black 120%), url('../../Assists/Images/Other/Hot\ air\ baloon.jpg')
+}
+#experiences:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black 100%), url('../../Assists/Images/Experience/Horseback.jpg');
+    background-position: right;
+}
+#storage-and-transport{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black 120%), url('../../Assists/Images/storage/800px-Flatbed_container_trailer.jpg')
+}
+#storage-and-transport:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 50%, black 110%), url('../../Assists/Images/storage/belgium-antwerp-shipping-container-163726.jpeg')
+}
+#party{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black 120%), url('../../Assists/Images/Party/Sport_Arena_Bounce_house_15x19_2014-02-03_14-15.jpg')
+}
+#party:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 80%, black 100%), url('../../Assists/Images/Party/disco\ ball.jpg')
+}
+#all{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 70%, black 120%)
+}
+#all:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 80%, black 100%)
+}
+#others{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 18%, black 110%), url('../../Assists/Images/Other/Mountain\ Bike.jpg');
+}
+#others:hover{
+    background-image: radial-gradient(rgba(255, 255, 255, 0) 18%, black 110%), url('../../Assists/Images/Other/Surf\ board\ Chick.jpeg');
+}
+
+
+
+.groups{
+    height:200px;
+    width:300px;
+    background-size: cover;
+    font-size:150%;
+    margin:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    /* margin-top:200px; */
+    /* z-index: 1; */
+}
+.groups:hover{
+    /* height:40%;
+    width:75%; */
+    box-shadow: 10px 10px 20px 2px;
+    /* font-size:200%; */
+}
+.NameUp{   
+    top:20%;
+}
+.groupName{
+    color:black;
+    -webkit-text-stroke: .25px;
+    -webkit-text-stroke-color: white;
+    font-family: 'Russo One';
+    position: absolute;
+    /* font-size: 300% */
+    /* top:20%; */
+}
+.NameDown{
+    bottom:20%;  
+}
+.groupsLink{
+    height:40%;
+    width:75%;
+    z-index: 1;
+    position: absolute, center;
+    /* border:1px solid red; */
+    /* border:1px solid red; */
+}
+#all{
+    font-size: 300%
+}
