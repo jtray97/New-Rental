@@ -11,6 +11,8 @@ const profanity = require('profanity-middleware')
 const curses = require('./curseWords')
 const aws = require('aws-sdk')
 const nodemailer = require ('nodemailer')
+
+app.use(express.static(__dirname + '/../build'))
 //MIDDLEWARE
 app.use(bodyParser.json())
 app.use(session({
