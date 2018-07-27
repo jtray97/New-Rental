@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Unit from './Unit'
 
@@ -75,6 +75,7 @@ export default class AllGroups1 extends Component {
             // console.log(this.props)
             return (<div>
                 <MiniProf loggedIn={this.state.loggedIn}/>
+            current user:
             {this.state.user.email}
             <input type="text" id ="subject" onChange={(e)=>this.updateState(e)}/>
             {this.state.subject}

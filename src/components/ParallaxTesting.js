@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
 
 //IMPORT COMPONENTS
-import MiniProf from './MiniProf'
+// import MiniProf from './MiniProf'
 // import Group from './Group'
 
 //IMPORT CSS

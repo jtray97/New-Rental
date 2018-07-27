@@ -93,29 +93,29 @@ class Profile extends Component {
         )
     }
     componentDidMount() {
-        if (this.state.loggedIn === false) {
-            console.log('made it through the if')
-            this.props.history.push('/')
-            swal({
-                type: 'error',
-                title: 'Please log in.'
-            })
-        }
         axios.get('/api/user-data').then(user => {
-            // console.log('user data', user.data)
-            this.setState({
-                user: user.data,
-            });
-            // console.log(this.state.user.id)
-
-            axios.get(`/api/user_units/${this.state.user.id}`).then((response) => {
-                // console.log(response.data)
+            if (user.data !== 'redirect') {
                 this.setState({
-                    user_units: response.data
+                    loggedIn: true,
+                    user: user.data
                 })
-            });
+            } else (this.props.history.push('/'))
+        }
+    ).then(()=>{
+
+        
+        
+        // console.log('hello this mounted fine')
+        
+        axios.get(`/api/user_units/${this.state.user.id}`).then((response) => {
+            // console.log(response.data)
+            this.setState({
+                user_units: response.data
+            })
         })
+        });
     }
+
     handlePopUp = (img) => {
         console.log('clicked')
         this.setState({
@@ -171,11 +171,11 @@ class Profile extends Component {
         return (
 
             <div className="Profile">
-                Profile
+                
                 <div className="testing">
                     <br />
-                    <Link to='/'><button>Go Back</button></Link>
-                    <button onClick={this.handleLogout} >Logout</button>
+                    <Link to='/'><button className = 'goBackProfile' >Go Back</button></Link>
+                    <button onClick={this.handleLogout} className = 'logout'>Logout</button>
                     <br />
                     <br />
                     <img src={this.state.user.user_img} alt="User" className="profilePicture" />
@@ -184,7 +184,7 @@ class Profile extends Component {
                     {
                         (!this.state.edit) ? (
                             <div>
-                                <Link to='/new'><button>Add New</button></Link>
+                                <Link to='/new'><button className='addNewProfile'>Add New</button></Link>
                                 {UserUnits}
                             </div>
                         )

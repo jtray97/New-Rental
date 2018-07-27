@@ -11,6 +11,10 @@ const profanity = require('profanity-middleware')
 const curses = require('./curseWords')
 const aws = require('aws-sdk')
 const nodemailer = require ('nodemailer')
+const checkLoggedin = require('./LOGGED')
+
+
+//  MIDDLEWARE
 
 app.use(express.static(__dirname + '/../build'))
 app.use(bodyParser.json())
@@ -77,7 +81,7 @@ app.get('/callback', (req, res) => { //make sure TO CHECK THIS ONE HERE!=A-=F=-0
             .then(result => {
                 // console.log('user logged in')
                 req.session.user = result.data
-                // console.log(req.session.user)
+                console.log(req.session.user)
 
             })
 
@@ -98,7 +102,7 @@ app.get('/callback', (req, res) => { //make sure TO CHECK THIS ONE HERE!=A-=F=-0
         }
 
         // console.log(temp)
-
+        // console.log('user logged in')
         res.redirect(`${process.env.FRONTEND_DOMAIN}/#/`)
     }
 })
@@ -162,7 +166,7 @@ db.emailInfo([unit_id]).then((response)=>{
     console.log(email,name,unit_name,ppd)
     
     let HelperOptions = {
-          from: '"Tyler" <tyler.ray.97@gmail.com>',
+          from: '"Tyler" <rentalsOutdoor@gmail.com>',
           to: email,
           subject: `Your listing got a message about: ${subject}`,
           text: `Dear ${name}, you have a message about your ${unit_name} listed for $${ppd}: ${body}`
@@ -180,7 +184,7 @@ db.emailInfo([unit_id]).then((response)=>{
   
 })
 //MY ENDPOINTS
-app.get('/api/user-data', (req, res) => {
+app.get('/api/user-data', checkLoggedin.checkLoggedIn, (req, res) => {
     // console.log(req.session)
     res.status(200).send(req.session.user)
 
@@ -218,7 +222,7 @@ app.put(`/api/update-unit/:unit_id`,(req, res)=>{
 })
 //SET unit_name= $2, ppd=$3, description=$4, zip_code=$5, type=$6, img1=$7, img2=$8, img3=$9, img4=$10, type=$11
 
-app.post('/api/newUnit', async (req, res) => {
+app.post('/api/newUnit',checkLoggedin.checkLoggedIn, async (req, res) => {
     let {
         unit_name,
         ppd,
@@ -255,7 +259,7 @@ app.get('/api/user_units/:id', async (req, res) => {
     }
     ).catch(err => console.log(err))
 })
-app.delete('/api/deleteUnit/:unit_id', (req, res) => {
+app.delete('/api/deleteUnit/:unit_id', checkLoggedin.checkLoggedIn, (req, res) => {
     // console.log(req.session.user)
     const db = req.app.get('db')
     db.deleteUnit([req.params.unit_id, req.session.user.id]).then((response) => {

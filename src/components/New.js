@@ -54,9 +54,16 @@ class New extends Component {
     componentDidMount() {
         // console.log('comp did mougnt')
         axios.get('/api/user-data').then(response =>
-            this.setState({
-                user: response.data
-            })
+            {
+                if(response.data === 'redirect'){
+
+                    this.props.history.push('/')   
+                } else {
+                        this.setState({
+                            user: response.data
+                        }) 
+                }
+            }
         )
     }
     updateState = (event) => {

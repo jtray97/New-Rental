@@ -1,6 +1,6 @@
 import React from 'react'
 import{Link} from 'react-router-dom'
-import Button from 'styled-components'
+// import Button from 'styled-components'
 export default function MiniProf(props) {
     function handleLogin (){
         const redirectUri = encodeURIComponent(`${window.origin}/callback`);

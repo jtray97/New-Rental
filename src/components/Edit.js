@@ -73,15 +73,15 @@ class Edit extends Component {
         // console.log('value: ', event.target.value)
 
 
-            this.setState({
-                [event.target.id]: event.target.value
-            })
-            // if(event.target.id==='type'){
-            //     this.setState({
-            //         subtype:''
-            //     })
-            // }
-       
+        this.setState({
+            [event.target.id]: event.target.value
+        })
+        // if(event.target.id==='type'){
+        //     this.setState({
+        //         subtype:''
+        //     })
+        // }
+
 
     }
     handleType = (e) => {
@@ -330,19 +330,11 @@ class Edit extends Component {
                         <input id="img4" placeholder={this.props.img4} type="text" className='imageInput' onChange={this.updateState} /> */}
                     </div>
                     <div className='UnitDesc'>
-
-                        <input type="text" placeholder={this.props.unit_name} id='unit_name' onChange={this.updateState}  />
-
-
-                        <textarea type="number" placeholder={`$${this.props.ppd}`} id='ppd' maxlength="4" onChange={this.updateState} />
-
-                        <textarea type="number" placeholder={this.props.zip_code} id='zip_code' onChange={this.updateState} maxlength='5' />
-
-
-                        <textarea type="text" placeholder={this.props.contact_info} id='contact_info' onChange={this.updateState}  maxlength='10' />
-
-                        <textarea type="text" placeholder={this.props.contact_info2} id='contact_info2' onChange={this.updateState} maxlength='100'/>
-
+                        <input type="text" placeholder={this.props.unit_name} id='unit_name' onChange={this.updateState} />
+                        <textarea type="number" placeholder={`$${this.props.ppd}`} id='ppd' maxLength="4" onChange={this.updateState} />
+                        <textarea type="number" placeholder={this.props.zip_code} id='zip_code' onChange={this.updateState} maxLength='5' />
+                        <textarea type="text" placeholder={this.props.contact_info} id='contact_info' onChange={this.updateState} maxLength='10' />
+                        <textarea type="text" placeholder={this.props.contact_info2} id='contact_info2' onChange={this.updateState} maxLength='100' />
                         <input type="text" placeholder={this.props.description} id='description' onChange={this.updateState} />
                     </div>
                     <div className="select">
@@ -359,10 +351,10 @@ class Edit extends Component {
                         </select>
                     </div>
                     {this.switching()}
-                    <button onClick={this.props.handleCancel}>Cancel</button>
-
-
-                    <button onClick={this.handleUpdate}>Update</button>
+                    <div className="buttonsDiv">
+                        <button className='cancelButton' onClick={this.props.handleCancel}>Cancel</button>
+                        <button className='updateButton' onClick={this.handleUpdate}>Update</button>
+                    </div>
                 </div>
                 {/* <div>
 
@@ -377,7 +369,7 @@ class Edit extends Component {
                     zip_code={this.state.zip_code} />
                 {bigImg}
                 <div display={this.state.input ? "none" : "relative"} className="noInfo">
-                    <h2>Please fill out all input boxes</h2>
+                    {/* <h2>Please fill out all input boxes</h2> */}
                 </div>
             </div>
         )

@@ -49,7 +49,9 @@ export default class AllUnits extends Component {
     componentDidMount() {
         var realHash = this.props.match.path.split('/').pop() // here i'm using the props.match object
         axios.get('/api/user-data').then(user => {
-            if (user.data) {
+
+            console.log(user.data)
+            if (user.data !== 'redirect') {
                 this.setState({
                     loggedIn: true
                 })
@@ -342,16 +344,16 @@ export default class AllUnits extends Component {
                     <div className="zipSearch">
                         <input type="text" id="zip_search" placeholder="input zip code" onChange={(e) => this.handleZip(e)} />
                         <select onChange={(e) => this.handleZip(e)} id='radius'>
-                            <option value="2">2</option>
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="75">75</option>
-                            <option value="100">100</option>
+                            <option value="2">2 Miles</option>
+                            <option value="5">5 Miles</option>
+                            <option value="10">10 Miles</option>
+                            <option value="20">20 Miles</option>
+                            <option value="25">25 Miles</option>
+                            <option value="50">50 Miles</option>
+                            <option value="75">75 Miles</option>
+                            <option value="100">100 Miles</option>
                         </select>
-                        <button onClick={() => this.handleDistSearch(this.state.radius, this.state.zip_search)}>Search</button>
+                        <button onClick={() => this.handleDistSearch(this.state.radius, this.state.zip_search)} className = 'zipSearch'>Search by Zip</button>
                     </div>
 
                 // console.log(searchUnitDisplay)

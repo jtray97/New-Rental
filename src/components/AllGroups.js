@@ -20,7 +20,7 @@ export default class AllGroups extends Component {
     }
     componentDidMount() {
         axios.get('/api/user-data').then(user => {
-            if (user.data) {
+            if (user.data !=='redirect') {
                 this.setState({
                     loggedIn: true
                 })

@@ -132,6 +132,7 @@
         height:450px;
         max-height:550px;
         margin:10px;
+        margin-left:0px;
     }
     .EmailButton{
         position: absolute;
@@ -146,6 +147,10 @@
         top:200px;
         justify-content: flex-end;
         right:10px;
+    }
+    #contact_info2{
+        width:20%;
+        border:0.5 solid red;
     }
 }
 
@@ -187,13 +192,22 @@
         width:50%;
         right:0px;
     }
-.descDiv{
-    position:absolute;
-    top:40px;
-    width:60%;
-    right:0px;
+    .descDiv{
+        position:absolute;
+        top:40px;
+        width:60%;
+        right:0px;
+    }
+    .EmailButton{
+        bottom:10px;
+    }
+    .Edit{
+        margin-right:30px;
+    }
 }
-.EmailButton{
-    bottom:10px;
-}
+
+@media (min-width:730px){
+    .Edit{
+        margin-right:0px;
+    }
 }

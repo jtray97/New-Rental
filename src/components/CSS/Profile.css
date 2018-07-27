@@ -1,4 +1,27 @@
 .profilePicture{
     height:200px;
     width:auto;
+    border:2px solid #7b9db4;
+    border-radius:5px;
+    
+}
+
+.goBackProfile{
+    height:30px;
+    width:90px;
+    background-color: #3e627f;
+    border:none;
+    margin-right:20px;
+}
+.logout{
+    height:30px;
+    width:70px;
+    background-color: #3e627f;
+    border:none;
+}
+.addNewProfile{
+    height:30px;
+    width:200px;
+    background-color: #3e627f;
+    border:none;
 }
