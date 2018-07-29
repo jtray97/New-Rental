@@ -18,6 +18,8 @@
 }
 /* All Groups Page */
 @media(max-width:300px) {
+
+
     .groups {
         width: 90%;
     }
@@ -210,4 +212,14 @@
     .Edit{
         margin-right:0px;
     }
+}
+@media (min-width:870px){
+    .logo-img{
+        position:absolute;
+        
+        /* margin:0px 500px; */
+}
+.allBut{
+    padding-top:100px
+}
 }

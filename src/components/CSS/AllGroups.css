@@ -13,6 +13,19 @@
     /* background-position:center; */
     /* z-index: 2; */
 }
+.logo-img{
+    /* float:right; */
+    background-image: url('../../Assists/Rays\ rental\ possible\ logo.JPG');
+    position:relative;
+    top:0px;
+    left:0px;
+    z-index: 150;
+    height:100px;
+    width: 450px;
+    background-size: cover;
+    /* border:10px solid red; */
+    /* width:auto; */
+}
 .allBut{
     width:100%;
     height: 90%;

@@ -140,7 +140,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Quads">Quads</option>
                             <option id='subtype' value="UTVs">UTVs</option>
                             <option id='subtype' value="DirtBikes">Dirt Bikes</option>
@@ -153,7 +153,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="RVs">RVs</option>
                             <option id='subtype' value="Fifth Wheels">Fifth Wheels</option>
                             <option id='subtype' value="Pop-Up Trailers">Pop-Up Trailers</option>
@@ -165,7 +165,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Camping">Camping Package</option>
                             <option id='subtype' value="Watercraft">WaterSports Package</option>
                         </select>
@@ -175,7 +175,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
 
                             <option id='subtype' value="Speed Boats">Speed Boats</option>
                             <option id='subtype' value="Fishing Boats">Fishing Boats</option>
@@ -191,7 +191,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Hot Air Balloons">Hot Air Balloons</option>
                             <option id='subtype' value="HorseBack Riding">HorseBack Riding</option>
                             <option id='subtype' value="Tours">Tours</option>
@@ -203,7 +203,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Bounce Houses">Bounce Houses</option>
                             <option id='subtype' value="DJs">DJs</option>
                             <option id='subtype' value="Entertainer">Entertainer</option>
@@ -218,7 +218,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Horse Trailers">Horse Trailers</option>
                             <option id='subtype' value="Flatbed Trailers">Flatbed Trailers</option>
                             <option id='subtype' value="Storage Units">Storage Units</option>
@@ -231,7 +231,7 @@ class Edit extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Other">Other</option>
                             <option id='subtype' value="SurfBoards">SurfBoards</option>
                             <option id='subtype' value="WakeBoards">WakeBoards</option>

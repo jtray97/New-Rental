@@ -25,7 +25,7 @@ export default class AllUnits extends Component {
         }
     }
     updateSubtype = (event) => {
-        if (this.state.subtype === 'Select sub type') {
+        if (this.state.subtype === 'Select Sub Type') {
             this.setState({ subtype: null })
         } else {
             this.setState({
@@ -150,7 +150,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="Camping">Camping Package</option>
                             <option id='subtype' value="Watercraft">WaterSports Package</option>
                         </select>
@@ -162,7 +162,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="Hot Air Balloons">Hot Air Balloons</option>
                             <option id='subtype' value="HorseBack Riding">HorseBack Riding</option>
                             <option id='subtype' value="Tours">Tours</option>
@@ -175,7 +175,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="Quads">Quads</option>
                             <option id='subtype' value="UTVs">UTVs</option>
                             <option id='subtype' value="DirtBikes">Dirt Bikes</option>
@@ -189,7 +189,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="RVs">RVs</option>
                             <option id='subtype' value="Fifth Wheels">Fifth Wheels</option>
                             <option id='subtype' value="Pop-Up Trailers">Pop-Up Trailers</option>
@@ -202,7 +202,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="Speed Boats">Speed Boats</option>
                             <option id='subtype' value="Fishing Boats">Fishing Boats</option>
                             <option id='subtype' value="JetSkis">JetSkis</option>
@@ -218,7 +218,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="Horse Trailers">Horse Trailers</option>
                             <option id='subtype' value="Flatbed Trailers">Flatbed Trailers</option>
                             <option id='subtype' value="Storage Units">Storage Units</option>
@@ -232,7 +232,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option id='subtype' value=''>Select sub type</option>
+                            <option id='subtype' value=''>Select Sub Type</option>
                             <option id='subtype' value="Bounce Houses">Bounce Houses</option>
                             <option id='subtype' value="DJs">DJs</option>
                             <option id='subtype' value="Entertainer">Entertainer</option>
@@ -248,7 +248,7 @@ export default class AllUnits extends Component {
                 subCategories =
                     <div className='Filter'>
                         <select name="subType" id="subType" onChange={(e) => { this.updateSubtype(e) }}>
-                            <option value=''>Select sub type</option>
+                            <option value=''>Select Sub Type</option>
                             <option id='subtype' value="Other">Other</option>
                             <option id='subtype' value="SurfBoards">SurfBoards</option>
                             <option id='subtype' value="WakeBoards">WakeBoards</option>
@@ -342,7 +342,7 @@ export default class AllUnits extends Component {
 
                 var searchKey =
                     <div className="zipSearch">
-                        <input type="text" id="zip_search" placeholder="input zip code" onChange={(e) => this.handleZip(e)} />
+                        <input type="text" id="zip_search" placeholder="Input Zip Code" onChange={(e) => this.handleZip(e)} />
                         <select onChange={(e) => this.handleZip(e)} id='radius'>
                             <option value="2">2 Miles</option>
                             <option value="5">5 Miles</option>
@@ -351,7 +351,7 @@ export default class AllUnits extends Component {
                             <option value="25">25 Miles</option>
                             <option value="50">50 Miles</option>
                             <option value="75">75 Miles</option>
-                            <option value="100">100 Miles</option>
+                            <option value="100">100 Milesnpm</option>
                         </select>
                         <button onClick={() => this.handleDistSearch(this.state.radius, this.state.zip_search)} className = 'zipSearch'>Search by Zip</button>
                     </div>
@@ -364,7 +364,7 @@ export default class AllUnits extends Component {
                             <MiniProf loggedIn={this.state.loggedIn} />
                             <h1 className='TypeFilter'>{this.props.match.path.split('/').pop().toUpperCase()}</h1>
                             {subCategories}
-                            <input type="text" placeholder='search' id='search' onChange={(event => { this.updateSearch(event) })} />
+                            <input type="text" placeholder='Search' id='search' onChange={(event => { this.updateSearch(event) })} />
                             {searchKey}
                         </header>
                         <div className="spacerDiv"></div>

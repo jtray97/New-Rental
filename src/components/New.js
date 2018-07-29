@@ -35,7 +35,7 @@ class New extends Component {
 
         }
     }
-    
+
 
     // MY FUNCTIONS:
     handlePopUp = (img) => {
@@ -53,17 +53,16 @@ class New extends Component {
     }
     componentDidMount() {
         // console.log('comp did mougnt')
-        axios.get('/api/user-data').then(response =>
-            {
-                if(response.data === 'redirect'){
+        axios.get('/api/user-data').then(response => {
+            if (response.data === 'redirect') {
 
-                    this.props.history.push('/')   
-                } else {
-                        this.setState({
-                            user: response.data
-                        }) 
-                }
+                this.props.history.push('/')
+            } else {
+                this.setState({
+                    user: response.data
+                })
             }
+        }
         )
     }
     updateState = (event) => {
@@ -140,7 +139,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType">
-                            <option value="blank">Please select type</option>
+                            <option value="blank">Please Select Type</option>
                         </select>
                     </div>
                 )
@@ -148,7 +147,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Quads">Quads</option>
                             <option id='subtype' value="UTVs">UTVs</option>
                             <option id='subtype' value="DirtBikes">Dirt Bikes</option>
@@ -163,7 +162,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="RVs">RVs</option>
                             <option id='subtype' value="Fifth Wheels">Fifth Wheels</option>
                             <option id='subtype' value="Pop-Up Trailers">Pop-Up Trailers</option>
@@ -175,7 +174,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Camping">Camping Package</option>
                             <option id='subtype' value="Watercraft">WaterSports Package</option>
                         </select>
@@ -185,7 +184,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
 
                             <option id='subtype' value="Speed Boats">Speed Boats</option>
                             <option id='subtype' value="Fishing Boats">Fishing Boats</option>
@@ -201,7 +200,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Hot Air Balloons">Hot Air Balloons</option>
                             <option id='subtype' value="HorseBack Riding">HorseBack Riding</option>
                             <option id='subtype' value="Tours">Tours</option>
@@ -213,7 +212,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Bounce Houses">Bounce Houses</option>
                             <option id='subtype' value="DJs">DJs</option>
                             <option id='subtype' value="Entertainer">Entertainer</option>
@@ -228,7 +227,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Horse Trailers">Horse Trailers</option>
                             <option id='subtype' value="Flatbed Trailers">Flatbed Trailers</option>
                             <option id='subtype' value="Storage Units">Storage Units</option>
@@ -241,7 +240,7 @@ class New extends Component {
                 return (
                     <div>
                         <select name="subType" id="subType" onChange={(e) => { this.updatesubtype(e) }}>
-                            <option value="select">Select sub type</option>
+                            <option value="select">Select Sub Type</option>
                             <option id='subtype' value="Other">Other</option>
                             <option id='subtype' value="SurfBoards">SurfBoards</option>
                             <option id='subtype' value="WakeBoards">WakeBoards</option>
@@ -257,43 +256,43 @@ class New extends Component {
         }
     }
     uploadFile = (file, signedRequest, url) => {
-    
+
         var options = {
-          headers: {
-            'Content-Type': file.type
-          }
+            headers: {
+                'Content-Type': file.type
+            }
         };
         axios.put(signedRequest, file, options)
-        .then( response => {
-          this.setState({isUploading: false, img1: url})
-          // THEN DO SOMETHING WITH THE URL. SEND TO DB USING POST REQUEST OR SOMETHING
-        })
-        .catch( err => {
-          console.log(err)
-        })
-      }
-    
-      
-      getSignedRequest = (file) => {
+            .then(response => {
+                this.setState({ isUploading: false, img1: url })
+                // THEN DO SOMETHING WITH THE URL. SEND TO DB USING POST REQUEST OR SOMETHING
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
+
+    getSignedRequest = (file) => {
         const fileName = 'ta1-' + file.name.replace(/\s/g, '-')
         axios.get('/sign-s3', {
-          params: {
-            'file-name': fileName,
-            'file-type': file.type
-          }
-        }).then( (response) => {
-          const { signedRequest, url } = response.data 
-          this.setState({isUploading: true})
-          this.uploadFile(file, signedRequest, url)
-        }).catch( err => {
-          console.log(err)
+            params: {
+                'file-name': fileName,
+                'file-type': file.type
+            }
+        }).then((response) => {
+            const { signedRequest, url } = response.data
+            this.setState({ isUploading: true })
+            this.uploadFile(file, signedRequest, url)
+        }).catch(err => {
+            console.log(err)
         })
-      }
-      
-      addFile = ([file]) => {
+    }
+
+    addFile = ([file]) => {
         // const file = files[0]
         this.getSignedRequest(file)
-      }
+    }
     render() {
         var bigImg
         if (this.state.dispImg) {
@@ -308,50 +307,47 @@ class New extends Component {
         }
 
         return (
-            <div className="new">
-                New
+            <div className="Edit">
+                {/* New */}
                 {bigImg}
-                <div className="Unit">
+                <div className="Slip">
                     <div className='imageInputDivs'>
-                    <Dropzone
-                        onDropAccepted={this.addFile}
-                        style={{
-                            position: 'relative',
-                            width: 200,
-                            height: 200,
-                            borderWidth: 7,
-                            borderColor: 'rgb(102, 102, 102)',
-                            borderStyle: 'dashed',
-                            borderRadius: 5,
-                            float:'Left',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            fontSize: 28,
-                        }}
-                        accept='image/*'
-                        multiple={false} >
+                        <Dropzone
+                            onDropAccepted={this.addFile}
+                            style={{
+                                position: 'relative',
+                                width: 200,
+                                height: 200,
+                                borderWidth: 7,
+                                borderColor: 'rgb(102, 102, 102)',
+                                borderStyle: 'dashed',
+                                borderRadius: 5,
+                                float: 'Left',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                fontSize: 28,
+                            }}
+                            accept='image/*'
+                            multiple={false} >
 
-                        {this.state.isUploading
-                            ? <GridLoader />
-                            : <p>Drop File or Click Here</p>
-                        }
-                    </Dropzone>
+                            {this.state.isUploading
+                                ? <GridLoader />
+                                : <p>Drop File or Click Here</p>
+                            }
+                        </Dropzone>
                         {/* <input id="img1" placeholder='Primary Image' type="text" className='imageInput' onChange={this.updateState} /> */}
                         {/* <input id="img2" placeholder='Image 2' type="text" className='imageInput' />
                         <input id="img3" placeholder='Image 3' type="text" className='imageInput' />
                         <input id="img4" placeholder='Image 4' type="text" className='imageInput' /> */}
                     </div>
                     <div className='UnitDesc'>
-                        <div className="namePrice">
-                            <input type="text" placeholder='Name' id='unit_name' onChange={this.updateState} />
-                            <input type="number" placeholder='Price per day' id='ppd' onChange={this.updateState} />
-                            {/* <hr /> this is the weird line under image 4 */}
-                        </div>
+                        <input type="text" placeholder='Unit Name' id='unit_name' onChange={this.updateState} />
+                        <textarea type="number" placeholder={`$ Per Day`} id='ppd' maxLength="4" onChange={this.updateState} />
+                        <textarea type="number" placeholder='Zip Code' id='zip_code' onChange={this.updateState} maxLength='5' />
+                        <textarea type="text" placeholder='Phone contact' id='contact_info' onChange={this.updateState} maxLength='10' />
+                        <textarea type="text" placeholder='Email Contact' id='contact_info2' onChange={this.updateState} maxLength='100' />
                         <input type="text" placeholder='Description' id='description' onChange={this.updateState} />
-                        <input type="number" placeholder='Zip Code' id='zip_code' onChange={this.updateState} />
-                        <input type="text" placeholder='Shown Contact Info' id='contact_info' onChange={this.updateState} />
-                        <input type="text" placeholder='Shown Contact Info' id='contact_info2' onChange={this.updateState} />
                     </div>
                     <div className="select">
                         <select name="Type" id="type" onChange={this.updateState}>
@@ -374,15 +370,16 @@ class New extends Component {
 
 
 
+                    <div className="buttonsDiv">
+                        <Link to="/profile"><button className='cancelButton'>Cancel</button></Link>
+                        {/* This button will have to insert into the sql database and then push back to the previous place */}
+                        <button onClick={this.handleInsert} className='updateButton'>Insert</button>
+                    </div>
 
-                    <Link to="/profile"><button>Cancel</button></Link>
-                    {/* This button will have to insert into the sql database and then push back to the previous place */}
-                    <button onClick={this.handleInsert}>Insert</button>
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <div>
+                <br />
+
+                {/* <div>
                     <p>Unit Name:{this.state.unit_name}</p>
                     <p>Price per day:{this.state.ppd}</p>
                     <p>Description:{this.state.description}</p>
@@ -390,11 +387,11 @@ class New extends Component {
                     <p>User ID:         {this.state.user.id}</p>
                     <p>Type: {this.state.type}</p>
                     <p>subType: {this.state.subtype}</p>
-                </div>
-                <Unit handlePopUp={this.handlePopUp} type={this.state.type || 'select a type'} unit_name={this.state.unit_name || "Please Add A Name"} description={this.state.description || "There is no description."} ppd={this.state.ppd || 0} img1={this.state.img1} subtype={this.state.subtype} contact_info={this.state.contact_info || 'Contact Info'} contact_info2={this.state.contact_info2} />
+                </div> */}
+                <Unit handlePopUp={this.handlePopUp} type={this.state.type || 'Select A Type'} unit_name={this.state.unit_name || "Please Add A Name"} description={this.state.description || "There is no description."} ppd={this.state.ppd || 0} img1={this.state.img1} subtype={this.state.subtype} contact_info={this.state.contact_info || 'Contact Info'} contact_info2={this.state.contact_info2} />
 
                 <div display={this.state.input ? "none" : "relative"} className="noInfo">
-                    <h2>Please fill out all input boxes</h2>
+                    {/* <h2>Please fill out all input boxes</h2> */}
                 </div>
             </div>
         )

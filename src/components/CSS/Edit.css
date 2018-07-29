@@ -1,5 +1,5 @@
 .Edit{
-    top:30px;
+    top:10px;
     position:absolute;
     padding:10px;
     width:100%;
@@ -37,23 +37,23 @@ border:0.5px solid black;
 }
 
 #ppd{
-    width:100px;
+    width:90px;
     height:30px;
     border:0.5px solid black;
 }
 #zip_code{
     height:30px;
-    width:100px;
+    width:90px;
     border:0.5px solid black;
 }
 #contact_info{
-    width:90px;
+    width:110px;
     border:0.5px solid black;
     height:30px;
 }
 #contact_info2{
     width:90%;
-    border:0.5px solid red;
+    border:0.5px solid black;
     height:30px;
 }
 
