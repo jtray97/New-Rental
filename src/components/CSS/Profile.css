@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
 .profilePicture{
     height:200px;
     width:auto;
@@ -24,4 +25,8 @@
     width:200px;
     background-color: #3e627f;
     border:none;
+}
+p{
+    font-family: "Russo One"
+    
 }
