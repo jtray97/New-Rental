@@ -1,0 +1,14 @@
+#subject{
+    width:100px;
+    height:30px;
+}
+#body{
+    width:300px;
+    height:30px;
+}
+.emailInput{
+    display:flex;
+    flex-direction:column;
+    align-content: flex-end;
+    align-items: center;
+}

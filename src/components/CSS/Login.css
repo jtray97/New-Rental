@@ -19,6 +19,7 @@
     font-size:175%;
     border: .5px solid #3E627F;
     background-color:#7D9DB4;
+    margin-bottom:50px;
 }
 
 .skipButton{
@@ -29,4 +30,14 @@
     background-color: #C3D2DE;
     border:.5px solid #7D9DB4;
 }
-
+.logo{
+    background-image: url('../../Assists/Rays\ rental\ possible\ logo.JPG');
+    position:relative;
+    width:450px;
+    height:125px;
+    /* border: 10px solid red; */
+    margin:auto;
+    /* text-align: center; */
+    /* align-self: center; */
+    margin-bottom:50px;
+}

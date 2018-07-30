@@ -24,10 +24,12 @@ class Login extends Component {
     render() {
         return (
             <div className="LoginPage">
+                {/* <img src="./../Assists/Rays rental possible logo.JPG" alt="logo" className='logo'/> */}'
+                <div className="logo"></div>
                 {/* <input id='username' type="text" onChange = {this.updateState}/>
                 <input id ='password' type="text"onChange = {this.updateState}/> */}
                 <button onClick={this.handleLogin} className="Login">Login</button>
-                <br/>
+                <br />
                 <Link to='/'><button className="skipButton">Skip login</button></Link>
             </div>
         )

@@ -70,20 +70,24 @@ export default class AllGroups1 extends Component {
     }
     }
     render() {
-    let displayUnit= <Unit type={this.state.unit.type} unit_name={this.state.unit.unit_name} description={this.state.unit.description} ppd={this.state.unit.ppd} unit_id={this.state.unit.unit_id} img1={this.state.unit.img1} subtype={this.state.unit.subtype} zip_code={this.state.unit.zip_code} contact_info={this.state.unit.contact_info} contact_info2={this.state.unit.contact_info2} handlePopUp={this.handlePopUp} sendEmail = {this.sendEmail} />
+    let displayUnit= <Unit type={this.state.unit.type} unit_name={this.state.unit.unit_name} description={this.state.unit.description} ppd={this.state.unit.ppd} unit_id={this.state.unit.unit_id} img1={this.state.unit.img1} subtype={this.state.unit.subtype} zip_code={this.state.unit.zip_code} contact_info={this.state.unit.contact_info} contact_info2={this.state.unit.contact_info2} handlePopUp={this.handlePopUp} sendEmail = {this.sendEmail} id='emailUnit'/>
             // console.log(this.state.user)
             // console.log(this.props)
             return (<div>
                 <MiniProf loggedIn={this.state.loggedIn}/>
             current user:
+            <div className="emailInput">
             {this.state.user.email}
-            <input type="text" id ="subject" onChange={(e)=>this.updateState(e)}/>
+            <textarea type="text" maxLength='100' id ="subject" onChange={(e)=>this.updateState(e)}/>
             {this.state.subject}
-            <input type="text" id ="body" onChange={(e)=>this.updateState(e)}/>
+            <textarea maxLength='500' type="text" id ="body" onChange={(e)=>this.updateState(e)}/>
             {this.state.body}
             <br/>
             <button onClick={this.sendEmail}>send email</button>
+            </div>
+            <div className="testing">
             {displayUnit}
+            </div>
         </div>
         )
     }

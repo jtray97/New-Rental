@@ -18,6 +18,7 @@ import './components/CSS/Login.css'
 import './components/CSS/Profile.css'
 import './components/CSS/Unit.css'
 import './components/CSS/Media.css'
+import './components/CSS/Email.css'
 
 import routes from './routes/routes';
 // import './components/Group.css'
