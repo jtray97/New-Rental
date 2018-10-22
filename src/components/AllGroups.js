@@ -4,6 +4,7 @@ import axios from 'axios'
 
 //IMPORT COMPONENTS
 import MiniProf from './MiniProf'
+import GoBack from './GoBack'
 // import Group from './Group'
 
 //IMPORT CSS
@@ -34,7 +35,8 @@ export default class AllGroups extends Component {
         return (
 
             <div className="AllGroups">
-                <MiniProf loggedIn={this.state.loggedIn} />
+            <GoBack/>
+                <MiniProf loggedIn={this.state.loggedIn} id = 'testingLogin' />
                 <div className="parallax-container">
                     {/* <div className="six layer" ></div> */}
                     <div className="five layer"></div>
@@ -49,7 +51,7 @@ export default class AllGroups extends Component {
                     <div className="allBut">
 
                         <div className="groups" id="Off-roaders">
-                            <h1 className="groupName NameDown" id="">Off-Roaders & Quads</h1>
+                            <h1 className="groupName NameDown" style={{pointerEvents:'none'}}>Off-Roaders & Quads</h1>
                             <Link to='./Off-roaders'>
                                 <div className="groupsLink"></div>
                             </Link>
@@ -57,7 +59,7 @@ export default class AllGroups extends Component {
 
 
                         <div className="groups " id='camping'>
-                            <h1 className="groupName NameUp">RVs & Campers</h1>
+                            <h1 className="groupName NameUp" style={{pointerEvents:'none'}}>RVs & Campers</h1>
                             <Link to='./camping'>
                                 <div className="groupsLink"></div>
                             </Link>
@@ -71,7 +73,7 @@ export default class AllGroups extends Component {
                     </div> */}
 
                         <div className="groups " id='watercraft'>
-                            <h1 className="groupName NameUp">Boats & Jetskis</h1>
+                            <h1 className="groupName NameUp" style={{pointerEvents:'none'}}>Boats & Jetskis</h1>
                             <Link to='./watercraft'>
                                 <div className="groupsLink"></div>
                             </Link>
@@ -80,34 +82,34 @@ export default class AllGroups extends Component {
 
 
                         <div className="groups " id='experiences'>
-                            <h1 className="groupName NameUp">Experiences & Tours</h1>
+                            <h1 className="groupName NameUp" style={{pointerEvents:'none'}}>Experiences & Tours</h1>
                             <Link to='./experiences'>
                                 <div className="groupsLink"></div>
                             </Link>
                         </div>
 
                         <div className="groups " id='party'>
-                            <h1 className="groupName NameUp">Party Equipment</h1>
+                            <h1 className="groupName NameUp"style={{pointerEvents:'none'}}>Party Equipment</h1>
                             <Link to='./party'>
                                 <div className="groupsLink"></div>
                             </Link>
                         </div>
 
                         <div className="groups " id='storage-and-transport'>
-                            <h1 className="groupName NameDown">Storage & Transport</h1>
+                            <h1 className="groupName NameDown"style={{pointerEvents:'none'}}>Storage & Transport</h1>
                             <Link to='./storage-and-transport'>
                                 <div className="groupsLink"></div>
                             </Link>
                         </div>
                         <div className="groups " id='others'>
-                            <h1 className="groupName NameUp">Other/ Misc.</h1>
+                            <h1 className="groupName NameUp"style={{pointerEvents:'none'}}>Other/ Misc.</h1>
                             <Link to='./other'>
                                 <div className="groupsLink"></div>
                             </Link>
                         </div>
-                        <div className="groups" id='all'>
-                            <h1 className="groupName ">All</h1>
-                            <Link to='./all'>
+                        <div className="groups"  >
+                            <h1 className="groupName" style={{pointerEvents:'none'}}>All</h1>
+                            <Link to='./all' id="all" >
                                 <div className="groupsLink"></div>
                             </Link>
                         </div>

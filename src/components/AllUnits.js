@@ -4,6 +4,7 @@ import MiniProf from './MiniProf'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+import GoBack from './GoBack'
 import DisplayImage from './DisplayImage'
 
 
@@ -360,6 +361,7 @@ export default class AllUnits extends Component {
                 return (
                     <div className="testing">
                         <header className='header'>
+                    <GoBack/>
                             <Link to='/'><button className='GoHome'>Go Home</button></Link>
                             <MiniProf loggedIn={this.state.loggedIn} />
                             <h1 className='TypeFilter'>{this.props.match.path.split('/').pop().toUpperCase()}</h1>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import GoBack from './GoBack'
 
 class Login extends Component {
     constructor() {
@@ -24,6 +24,7 @@ class Login extends Component {
     render() {
         return (
             <div className="LoginPage">
+            <GoBack/>
                 {/* <img src="./../Assists/Rays rental possible logo.JPG" alt="logo" className='logo'/> */}'
                 <div className="logo"></div>
                 {/* <input id='username' type="text" onChange = {this.updateState}/>

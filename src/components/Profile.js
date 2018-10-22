@@ -7,6 +7,7 @@ import Unit from './Unit'
 import swal from 'sweetalert2'
 import Edit from './Edit'
 import DisplayImage from './DisplayImage'
+import GoBack from './GoBack'
 
 class Profile extends Component {
     constructor() {
@@ -171,7 +172,7 @@ class Profile extends Component {
         return (
 
             <div className="Profile">
-                
+                <GoBack/>
                 <div className="testing">
                     <br />
                     <Link to='/'><button className = 'goBackProfile' >Go Back</button></Link>

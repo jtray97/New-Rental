@@ -49,7 +49,8 @@ aws.config.region = 'us-west-1'
 app.get('/api/units', ctrl.read)
 
 app.get('/api/users', (req, res) => {
-
+    console.log('hello')
+    res.send('yes').status(200)
 })
 //AUTH 0 ENDPOINTS AND FUNCTIONS:
 app.get('/callback', (req, res) => { //make sure TO CHECK THIS ONE HERE!=A-=F=-0DSHAKVJNOJN;LKVJA;SDLKAV;LSKDNC;LKSD;FLAKSD;FLKASJD;FALKASJ;DFLKJA;SDLK;ALKSJD;FLAKJS;DLKFJAS
@@ -157,19 +158,19 @@ db.emailInfo([unit_id]).then((response)=>{
 )
 app.post('/api/inquire', (req,res)=>{
     
-let {body, subject, unit_id} = req.body
+// let {body, subject, unit_id} = req.body
 // console.log(body, subject, unit_id)
-const db = req.app.get('db')
-db.emailInfo([unit_id]).then((response)=>{
-    console.log(response[0])
-    let {email,name,unit_name, ppd} = response[0]
-    console.log(email,name,unit_name,ppd)
+// const db = req.app.get('db')
+// db.emailInfo([unit_id]).then((response)=>{
+//     console.log(response[0])
+//     let {email,name,unit_name, ppd} = response[0]
+//     console.log(email,name,unit_name,ppd)
     
     let HelperOptions = {
           from: '"Tyler" <rentalsOutdoor@gmail.com>',
-          to: email,
-          subject: `Your listing got a message about: ${subject}`,
-          text: `Dear ${name}, you have a message about your ${unit_name} listed for $${ppd}: ${body}`
+          to: 'tyler.ray.97@gmail.com',
+          subject: `Your listing got a message about:`,
+          text: `Dear tyler, you have a message about your thing listed for `
 };
 
   transporter.sendMail(HelperOptions, (error, info) => {
@@ -180,9 +181,9 @@ db.emailInfo([unit_id]).then((response)=>{
     console.log(info);
     res.sendStatus(200)
 });
-}).catch(err=>console.log(err))
-  
 })
+  
+
 //MY ENDPOINTS
 app.get('/api/user-data', checkLoggedin.checkLoggedIn, (req, res) => {
     // console.log(req.session)
